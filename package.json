@@ -1,0 +1,11 @@
+{
+    "name": "NodeMinimal",
+    "description": "Node JS - Express and Socket.IO Template",
+    "author": "grassjelly",
+    "dependencies": {
+        "express": "*",
+        "pm2": "^4.4.0",
+        "socket.io": "*"
+    },
+    "engine": "node >= 0.10.29"
+}

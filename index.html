@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>APP</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="logs" class="logs1">
+asdasd
+    </div>
+
+    <script>
+      var socket = io.connect();
+
+      socket.on('log-lines', function(data) {
+          let find = document.querySelector('.logs1');
+          let div = document.createElement('div');
+          div.innerHTML = JSON.stringify(data.at);
+          find.prepend(div);
+          console.log(data);
+      });
+      socket.on('hello', function(data) {
+          //emit callback from server
+          console.log(data)
+          socket.emit('hello',"Hello from client");
+           socket.emit('logs',"Hello from clientas");
+      });
+    </script>
+</body>
+
+</html>

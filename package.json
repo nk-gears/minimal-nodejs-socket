@@ -4,7 +4,7 @@
     "author": "grassjelly",
     "dependencies": {
         "express": "*",
-        "pm2": "^4.4.0",
+        "pm2": "^5.2.0",
         "socket.io": "*"
     },
     "engine": "node >= 0.10.29"
